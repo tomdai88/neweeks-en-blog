@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>sample@gmail.com (Bino Kochumol Varghese)</managingEditor>
     <webMaster>sample@gmail.com (Bino Kochumol Varghese)</webMaster>
-    <lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jun 2025 18:46:29 +0700</lastBuildDate>
     <atom:link href="https://en.neweeks.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My New Article</title>
+      <link>https://en.neweeks.com/post/2025/my-new-article/</link>
+      <pubDate>Sat, 14 Jun 2025 18:46:29 +0700</pubDate><author>sample@gmail.com (Bino Kochumol Varghese)</author>
+      <guid>https://en.neweeks.com/post/2025/my-new-article/</guid>
+      <description>&lt;p&gt;欢迎来到我的新文章：My New Article&lt;/p&gt;&#xA;&lt;p&gt;这里开始你的文章内容。在提供的 Markdown 文件内容中，以下部分必须与主要内容（文章的正文）匹配才能最有利于 SEO 优化排名：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;title (Front Matter): 文章的标题。&lt;/li&gt;&#xA;&lt;li&gt;description (Front Matter): 文章的描述。&lt;/li&gt;&#xA;&lt;li&gt;tags (Front Matter): 文章的标签。&lt;/li&gt;&#xA;&lt;li&gt;categories (Front Matter): 文章的分类。&lt;/li&gt;&#xA;&lt;li&gt;keywords (Front Matter): 文章的关键词。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
     <item>
       <title>Collections No.1</title>
       <link>https://en.neweeks.com/collections/2023/collections/</link>
@@ -23,13 +30,6 @@
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate><author>sample@gmail.com (Bino Kochumol Varghese)</author>
       <guid>https://en.neweeks.com/notes/2020/change/</guid>
       <description>&lt;p&gt;Journaling is not just a little thing you do to pass the time, to write down your memories—though it can be—it’s a strategy that has helped brilliant, powerful and wise people become better at what they do.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://en.neweeks.com/post/2025/my-new-article/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>sample@gmail.com (Bino Kochumol Varghese)</author>
-      <guid>https://en.neweeks.com/post/2025/my-new-article/</guid>
-      <description>&lt;p&gt;title: &amp;ldquo;{{ replace .File.ContentBaseName &amp;ldquo;-&amp;rdquo; &amp;quot; &amp;quot; | title }}&amp;rdquo; # Article title, automatically generated from filename&#xA;date: {{ .Date }} # Article creation date, automatically filled&#xA;lastmod: {{ .Date }} # Last modified date, can be same as date or manually updated later&#xA;draft: true # Set to true for draft, false to publish. Default is draft when created.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
