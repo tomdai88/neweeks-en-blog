@@ -282,17 +282,14 @@
         
           
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-4">
-    <a href="https://en.neweeks.com/post/2020/custom-shortcodes/">
+    <a href="https://en.neweeks.com/post/2025/my-new-article/">
         <div class="card single-post-card h-100 shadow-effect border">
-            
-            <img src="/img/posts/img-6_hu_a52b8e2f2c958107.jpg" alt="/img/posts/img-6.jpg"
-                class="card-img-top img-fluid lazyload">
             
 
             
             <div class="card-body">
 
-                <h3 class="fw-medium post-title">Lightbi Custom Shortcodes</h3>
+                <h3 class="fw-medium post-title"></h3>
                 
 
                 <p class="post-meta">
@@ -300,7 +297,7 @@
   
   
 
-  24 November 2023
+  01 January 0001
 
   
 
@@ -316,8 +313,10 @@
                 <div class="post-entry">
 
                     
-                    You can create your own shortcodes for unique needs by adding an HTML file to the `layouts/shortcodes/` directory. Below are the custom shortcodes availble in this theme...
-
+                    <p>title: &ldquo;{{ replace .File.ContentBaseName &ldquo;-&rdquo; &quot; &quot; | title }}&rdquo; # Article title, automatically generated from filename
+date: {{ .Date }} # Article creation date, automatically filled
+lastmod: {{ .Date }} # Last modified date, can be same as date or manually updated later
+draft: true # Set to true for draft, false to publish. Default is draft when created.</p>
                     
                 </div>
 
