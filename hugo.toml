@@ -101,6 +101,12 @@ showPostImage = false
     url = "/about/"
     weight = 5
 
+[[menu.main]]
+    name = "中文" # 语言切换按钮的显示文本
+    url = "https://zh.neweeks.com/" # 中文博客的完整 URL
+    weight = 99 # 确保它排在菜单的靠后位置，或者你希望的位置
+    identifier = "zh-lang-switcher" # 唯一的标识符
+
 
 [sitemap]
   changefreq = "monthly"
