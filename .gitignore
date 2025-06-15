@@ -1,0 +1,18 @@
+# Hugo Generated Folders and Files
+/public/          # 忽略 Hugo 生成的静态网站输出目录
+/resources/_gen/  # 忽略 Hugo 图片处理等生成的资源缓存目录
+.hugo_build.lock  # 忽略 Hugo 构建锁文件
+
+# Operating System Files
+.DS_Store         # macOS 目录服务文件
+Thumbs.db         # Windows 缩略图缓存
+
+# Editor Specific Files (Optional)
+.vscode/          # 如果你使用 VS Code 且不希望分享它的配置
+.idea/            # 如果你使用 IntelliJ IDEA
+*.sublime-project # Sublime Text 项目文件
+*.sublime-workspace # Sublime Text 工作区文件
+*.log             # 日志文件
+
+# Local Environment Files (Optional)
+.env              # 环境变量文件 (如果你使用)
