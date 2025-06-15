@@ -3,16 +3,72 @@
 /resources/_gen/  # 忽略 Hugo 图片处理等生成的资源缓存目录
 .hugo_build.lock  # 忽略 Hugo 构建锁文件
 
+# 如果你设置了 Hugo 将不同语言或输出格式生成到不同的子目录，请也忽略它们
+# 例如，如果你的多语言部署将英文站输出到 neweeks-en-public/ 文件夹，则添加：
+/neweeks-en-public/ # 忽略英文站的生成输出目录
+/neweeks-zh-public/ # 假设你的中文站也生成到类似目录，请根据实际情况调整
+
+# Lightbi Theme Specific Exclusions (来自你提供的主题文件)
+# website build is excluding
+
+# =========================
 # Operating System Files
-.DS_Store         # macOS 目录服务文件
+# =========================
+
+# Windows
 Thumbs.db         # Windows 缩略图缓存
+ehthumbs.db       # Windows 媒体文件缩略图缓存
+Desktop.ini       # Windows 文件夹配置信息
+$RECYCLE.BIN/     # Windows 回收站目录
+*.cab             # Windows Installer 相关文件
+*.msi             # Windows Installer 相关文件
+*.msm             # Windows Installer 相关文件
+*.msp             # Windows Installer 相关文件
+*.lnk             # Windows 快捷方式
+
+# macOS (OSX)
+.DS_Store         # macOS 目录服务文件
+.AppleDouble      # macOS 资源分支文件
+.LSOverride       # macOS LaunchServices 覆盖文件
+._* # macOS 缩略图/资源文件
+.Spotlight-V100   # macOS Spotlight 索引文件
+.Trashes          # macOS 垃圾桶目录
+.AppleDB          # macOS AFP 分享相关
+.AppleDesktop     # macOS AFP 分享相关
+Network Trash Folder # macOS 网络垃圾桶
+Temporary Items   # macOS 临时文件
+.apdisk           # macOS AFPS磁盘相关文件
+
 
 # Editor Specific Files (Optional)
-.vscode/          # 如果你使用 VS Code 且不希望分享它的配置
-.idea/            # 如果你使用 IntelliJ IDEA
+# 这些是编辑器自动生成的文件或文件夹，通常不希望共享或提交到版本控制
+.vscode/          # VS Code 编辑器的工作区配置
+.idea/            # IntelliJ IDEA 编辑器的工作区配置
 *.sublime-project # Sublime Text 项目文件
 *.sublime-workspace # Sublime Text 工作区文件
-*.log             # 日志文件
+*.swp             # Vim 交换文件
+*.log             # 常见的日志文件
+*.bak             # 备份文件
+*.tmp             # 临时文件
+.project          # Eclipse 等IDE项目文件
+.classpath        # Eclipse 等IDE类路径文件
+.settings/        # Eclipse 等IDE设置文件夹
 
 # Local Environment Files (Optional)
+# 这些文件包含本地敏感信息或特定于开发环境的配置，不应上传
 .env              # 环境变量文件 (如果你使用)
+.env.* # 匹配所有 .env.development, .env.production 等
+
+# Node.js / npm related (如果你在Hugo项目中使用了前端构建工具，如Webpack, Gulp等)
+/node_modules/    # Node.js 模块安装目录
+npm-debug.log* # npm 调试日志
+yarn-debug.log* # yarn 调试日志
+yarn-error.log* # yarn 错误日志
+
+# Hugo modules (如果你的项目使用了Hugo Modules来管理主题或组件)
+/go.mod
+/go.sum
+
+# 忽略主题中的不必要文件（如果不是通过submodule管理）
+/themes/lightbi-hugo@c65dfc4/
+
