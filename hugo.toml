@@ -1,9 +1,9 @@
-baseURL = 'https://en.neweeks.com/' # 你的英文网站域名
-languageCode = 'en-us' # 英文网站语言代码
-title = 'Neweeks English Blog' # 你的英文博客标题
+baseURL = 'https://zh.neweeks.com/' # 这是你的中文博客域名
+languageCode = 'zh-cn' # 设定语言代码为中文简体
+title = '周周新' # 你的中文博客标题
 theme = 'lightbi-hugo' # 指定使用的主题
 enableGitInfo = true # 建议开启，因为主题会用到，但如果Cloudflare Pages有问题再禁用
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh" # 设定默认内容语言为中文
 defaultContentLanguageInSubdir = false
 
 [params]
@@ -11,14 +11,14 @@ defaultContentLanguageInSubdir = false
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "首页" # 菜单项名称改为中文
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Posts"
+    name = "文章" # 菜单项名称改为中文
     url = "/post/"
     weight = 2
   [[menu.main]]
-    name = "About"
+    name = "关于" # 菜单项名称改为中文
     url = "/about/"
     weight = 3
