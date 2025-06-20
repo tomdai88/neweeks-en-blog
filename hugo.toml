@@ -1,0 +1,24 @@
+baseURL = 'https://en.neweeks.com/' # 你的英文网站域名
+languageCode = 'en-us' # 英文网站语言代码
+title = 'Neweeks English Blog' # 你的英文博客标题
+theme = 'lightbi-hugo' # 指定使用的主题
+enableGitInfo = true # 建议开启，因为主题会用到，但如果Cloudflare Pages有问题再禁用
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[params]
+  selfHosted = true # 根据主题文档，这个参数可能是必须的
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/post/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
