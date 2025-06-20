@@ -1,24 +1,122 @@
-baseURL = 'https://zh.neweeks.com/' # 这是你的中文博客域名
+baseURL = 'https://zh.neweeks.com/' # 替换为你的中文博客域名
+
+# 网站基本信息
 languageCode = 'zh-cn' # 设定语言代码为中文简体
 title = '周周新' # 你的中文博客标题
 theme = 'lightbi-hugo' # 指定使用的主题
-enableGitInfo = true # 建议开启，因为主题会用到，但如果Cloudflare Pages有问题再禁用
-defaultContentLanguage = "zh" # 设定默认内容语言为中文
-defaultContentLanguageInSubdir = false
+defaultContentLanguage = "zh" # 设定默认内容语言为中文 (配合zh-cn使用)
+defaultContentLanguageInSubdir = false # 单语言网站通常不需要内容在子目录
 
-[params]
-  selfHosted = true # 根据主题文档，这个参数可能是必须的
+# Git 信息集成（根据你的需求启用或禁用）
+enableGitInfo = true # 如果想在页脚显示Git提交信息，保留为true；否则改为false
+# 如果enableGitInfo为true，并且主题显示了链接，可在这里设置你自己的GitHub提交链接
+# [Params] 部分也会有commitLink参数
+# commitLink = "https://github.com/tomdai88/neweeks-zh-blog/commit/"
 
-[menu]
-  [[menu.main]]
-    name = "首页" # 菜单项名称改为中文
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "文章" # 菜单项名称改为中文
-    url = "/post/"
-    weight = 2
-  [[menu.main]]
-    name = "关于" # 菜单项名称改为中文
-    url = "/about/"
-    weight = 3
+
+# Hugo 构建和日志配置
+metaDataFormat = "yaml" # 内容文件的元数据格式
+pygmentsStyle = "trac" # 代码高亮样式
+#pygmentsUseClasses = true # 如果使用CSS来控制代码高亮，可开启
+#pygmentsCodeFences = true # 如果希望代码块带代码围栏，可开启
+pygmentsCodefencesGuessSyntax = true # 自动猜测代码语言
+#pygmentsUseClassic = true # 使用经典的代码高亮渲染
+#pygmentOptions = "linenos=inline" # 代码高亮行号选项
+googleAnalytics = "G-8962LNGFW4" # 你的 Google Analytics 测量 ID
+enableRobotsTXT = true # 开启生成 robots.txt
+summaryLength = "30" # 首页文章摘要的默认长度
+ignoreLogs = ['warning-goldmark-raw-html'] # 忽略特定警告日志
+
+
+# 分页设置
+[pagination]
+pagerSize = 6 # 每页文章数量，如果主题有自己的分页参数，可能会被覆盖
+
+
+# 主题参数 (Lightbi 特有)
+[Params]
+selfHosted = true # 根据主题文档，这个参数可能是必须的
+mainSections = ["post"] # 首页菜单会显示的主要文章目录，通常只包含post
+dateFormat = "2006年1月2日" # 调整日期格式以适应中文习惯
+
+# 功能开关 (根据你的需求开启或关闭)
+comments = false # 关闭评论
+readingTime = false # 关闭阅读时间显示
+wordCount = false # 关闭字数统计显示
+useHLJS = true # 使用 Highlight.js 进行代码高亮
+socialShare = false # 关闭文章分享按钮
+delayDisqus = true # 延迟加载 Disqus (如果comments为true)
+showRelatedPosts = true # 显示相关文章
+summaryLength = "9" # 摘要长度 (主题参数，可能会覆盖全局的summaryLength)
+lunrSearch = true # 开启搜索功能
+gcse = false # 关闭 Google Custom Search Engine
+lastmod = false # 不显示文章最后修改时间
+rss = false # 关闭 RSS 订阅
+pagination = "10" # 主题的分页参数
+hideAuthor = false # 不隐藏作者信息
+description="这里是我的中文博客，分享中文内容。" # 替换为你的中文网站描述
+previewCardImagePlacement = "top" # 预览卡片图片放置位置
+showPostImage = false # 不在文章列表或详情页显示文章图片（如果主题支持）
+
+# 作者信息 (Lightbi 特有)
+[Params.Author]
+  name = "无名" # 替换为你的中文名字
+  website = "https://zh.neweeks.com/" # 可以指向你的中文博客首页或个人网站
+  authorInfo = "这里是你的中文个人简介，可以分享你的座右铭或兴趣。" # 替换为你的中文简介
+  authorPostImage = "/img/author-post-img.jpg" # 如果有作者头像，放在 static/img/ 下
+  email = "touristdog88@gmail.com" # 替换为你的邮箱
+  # 社交媒体链接请根据你的实际情况填写，如果不需要可以删除或注释掉
+  # facebook = "username"
+  # instagram = "username"
+  # youtube = "user/username" # or channel/channelname
+  # twitter = "username"
+  # linkedin = "username"
+  github = "tomdai88" # 建议填写你的GitHub用户名
+  # threads = "username"
+  # gitlab = "username"
+  # reddit = "username"
+  # stackoverflow = "users/XXXXXXX/username"
+  # snapchat = "username"
+  # spotify = "username"
+  # paypal = "username"
+  # telegram = "username"
+  # mastodon = "url"
+  # slack = "username"
+  #bandcamp = "username"
+  #itchio = "username"
+  #vk = "username"
+  #500px = "username"
+  #kaggle = "username"
+  #weibo = "username"
+  #xing = "username"
+  #bitbucket = "username"
+  #soundcloud = "username"
+  # codepen = "username"
+
+# 导航菜单 (已保留你提供的中文导航)
+[[menu.main]]
+  name = "首页" # 菜单项名称
+  url = "/" # 链接地址
+  weight = 1 # 排序权重
+
+[[menu.main]]
+  name = "文章" # 菜单项名称
+  url = "/post/" # 假设你的文章都在 /post/ 目录下
+  weight = 2
+
+[[menu.main]]
+  name = "关于" # 菜单项名称
+  url = "/about/"
+  weight = 3
+
+# Sitemaps (网站地图)
+[sitemap]
+  changefreq = "monthly" # 变化频率
+  priority = 0.5 # 优先级
+  filename = "sitemap.xml" # 文件名
+
+# 分类法 (Taxonomies)
+[taxonomies] # 确保分类和标签的配置
+  category = "categories"
+  tag = "tags"
+  series = "series" # 如果你使用系列
