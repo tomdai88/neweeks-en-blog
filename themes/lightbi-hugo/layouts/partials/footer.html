@@ -61,11 +61,6 @@
         <!-- Please don't remove this, keep my open source work credited. -->
         <p class="credits theme-by text-muted">
           {{ i18n "poweredBy" . | safeHTML }}
-{{ if $.GitInfo }}
-    {{ with .GitInfo.Hash }}
-        &nbsp;&bull;&nbsp;<a href="{{ $.Site.Params.commitLink | default "https://github.com/gohugoio/hugo/commit/" }}{{ substr . 0 8 }}">{{ substr . 0 8 }}</a>
-    {{ end }}
-{{ end }}
         </p>
       </div>
     </div>
